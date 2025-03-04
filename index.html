@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Розклад</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Мій Щоденний Розклад</h1>
+            <div class="day-selector">
+                <button class="day-btn active" data-day="workday">Робочі дні</button>
+                <button class="day-btn" data-day="running">Дні бігу</button>
+                <button class="day-btn" data-day="weekend">Вихідні</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="schedule-container" id="workday">
+                <!-- Робочі дні будуть додані через JavaScript -->
+            </div>
+            <div class="schedule-container hidden" id="running">
+                <!-- Дні бігу будуть додані через JavaScript -->
+            </div>
+            <div class="schedule-container hidden" id="weekend">
+                <!-- Вихідні будуть додані через JavaScript -->
+            </div>
+        </main>
+
+        <div class="tips-section">
+            <h2>Важливі поради</h2>
+            <div class="tips-container">
+                <!-- Поради будуть додані через JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
