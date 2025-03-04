@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #6b9080;
+    --secondary-color: #a4c3b2;
+    --background-color: #f6fff8;
+    --text-color: #2d3047;
+    --accent-color: #cce3de;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.day-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.day-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.day-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.day-btn.active {
+    background-color: var(--primary-color);
+}
+
+.schedule-container {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.schedule-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.schedule-item:hover {
+    transform: translateY(-2px);
+}
+
+.time {
+    font-weight: bold;
+    min-width: 120px;
+    color: var(--primary-color);
+}
+
+.activity {
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.tips-section {
+    background-color: var(--accent-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.tips-container {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tip-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .day-selector {
+        flex-direction: column;
+    }
+    
+    .schedule-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .time {
+        margin-bottom: 0.5rem;
+    }
+}
